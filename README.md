@@ -15,14 +15,14 @@ I made a simple logic challenge to solve. A reverse word without affecting any s
 from the above problem, I made 6 solutions with different logic which are in the solutions folder.
 after running all benchmarks with 10000000 epoch I got a conclusion that functions the fastest to slower are:
 
-| SOLUTION | SPEED |
-| ------ | ------ |
-| SOLUTION 6 | 1.358s |
-| SOLUTION 3 | 1.47s |
-| SOLUTION 5 | 2.001s |
-| SOLUTION 4 | 2.188s |
-| SOLUTION 1 | 6.106s |
-| SOLUTION 2 | 6.802s |
+| SOLUTION | SPEED | Complexity |
+| ------ | ------ | ------ |
+| SOLUTION 6 | 1.358s | O(n) |
+| SOLUTION 3 | 1.47s | O(n) |
+| SOLUTION 5 | 2.001s | O(2n) |
+| SOLUTION 4 | 2.188s | O(n)(log n) |
+| SOLUTION 1 | 6.106s | O(2n) |
+| SOLUTION 2 | 6.802s | O(n2)O(log n) |
 
 
 SOLUTION 6 :crown:
