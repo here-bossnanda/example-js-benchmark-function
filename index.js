@@ -37,12 +37,12 @@ const solution = {
 
 // reverse without special character
 // example:
-// input: tiket.com
-// output: mocte.kit
+// input: sekolah.mu
+// output: muhalok.es
 
 // example:
-// input: t!ke&.com
-// output: m!oc&.ekt
+// input: h!a&@.loya
+// output: a!y&@.olah
 
 // TEST SOLUTION
 if (logSolutionActive) {
