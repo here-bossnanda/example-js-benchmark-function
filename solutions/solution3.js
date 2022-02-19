@@ -13,6 +13,7 @@ const solution3 = (word) => {
     let high = n - 1;
     let first = "";
     let last = "";
+    let result = ""
     while (low < high) {
         if (isAlphabet(word[low]) && isAlphabet(word[high])) {
             // Both char is Alphabet
@@ -31,8 +32,11 @@ const solution3 = (word) => {
             }
         }
     }
-    first += last;
-    return first;
+    result = first + last;
+
+    return result;
 };
 
 module.exports = { solution3 };
+
+// created by: https://kalkicode.com/reverse-string-without-affecting-special-characters

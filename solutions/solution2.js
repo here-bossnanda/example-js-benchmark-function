@@ -32,3 +32,5 @@ const solution2 = (word) => {
 };
 
 module.exports = { solution2 };
+
+// created by: https://github.com/here-bossnanda

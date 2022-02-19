@@ -5,7 +5,29 @@ const {
     solution4,
     solution5,
     solution6,
-} = require('./solutions')
+    solution7,
+    solution8,
+    solution9,
+    solution10,
+    solution11,
+} = require("./solutions");
+
+
+// reverse without special character
+// example:
+// input: sekolah.mu
+// output: muhalok.es
+
+// example:
+// input: mdp.ac.id
+// output: dic.ap.dm
+
+// example:
+// input: h!a&@.loya
+// output: a!y&@.olah
+
+
+// setting
 const { benchmark } = require("./benchmark");
 
 // loopTimes is variable for setting looping times
@@ -25,27 +47,25 @@ const totalFunc = 100
 // testWord is a variable to set testing wording to function
 const testWord = "h!a&@.loya";
 
+// note: solution 3 there something wrong
 // list existing function
 const solution = {
     1: solution1,
     2: solution2,
-    3: solution3,
     4: solution4,
     5: solution5,
-    6: solution6
+    6: solution6,
+    7: solution7,
+    8: solution8,
+    9: solution9,
+    10: solution10,
+    11: solution11,
 };
 
-// reverse without special character
-// example:
-// input: sekolah.mu
-// output: muhalok.es
-
-// example:
-// input: h!a&@.loya
-// output: a!y&@.olah
 
 // TEST SOLUTION
 if (logSolutionActive) {
+    console.log("SOLUTION IS RUNNING....");
     for (let i = 1; i <= totalFunc; i++) {
         if (solution.hasOwnProperty(i)) {
             console.log(
@@ -58,10 +78,7 @@ if (logSolutionActive) {
 
 // BENCHMARK
 if (benchmarkActive) {
-    // benchmark solution 1
-    // SOLUTION 4 improvent function from solution 2
-    // SOLUTION 5 improvent function from solution 1
-    // SOLUTION 6 improvent function from solution 2 and 3
+    console.log("\nBENCHMARK IS RUNNING....");
     for (let i = 1; i <= totalFunc; i++) {
         if (solution.hasOwnProperty(i)) {
             console.log(
