@@ -1,17 +1,16 @@
 const {
-    solution1,
-    solution2,
-    solution3,
-    solution4,
-    solution5,
-    solution6,
-    solution7,
-    solution8,
-    solution9,
-    solution10,
-    solution11,
+  solution1,
+  solution2,
+  solution3,
+  solution4,
+  solution5,
+  solution6,
+  solution7,
+  solution8,
+  solution9,
+  solution10,
+  solution11,
 } = require("./solutions");
-
 
 // reverse without special character
 // example:
@@ -25,7 +24,6 @@ const {
 // example:
 // input: h!a&@.loya
 // output: a!y&@.olah
-
 
 // setting
 const { benchmark } = require("./benchmark");
@@ -41,53 +39,42 @@ const benchmarkActive = true;
 // set true to see solution result in console
 const logSolutionActive = true;
 
-// total function
-const totalFunc = 100
-
 // testWord is a variable to set testing wording to function
-const testWord = "h!a&@.loya";
+// const testWords = ["sekolah.mu", "mdp.ac.id", "h!a&@.loya"];
+const testWords = ["h!a&@.loya"];
 
 // note: solution 3 there something wrong
 // list existing function
-const solution = {
-    1: solution1,
-    2: solution2,
-    4: solution4,
-    5: solution5,
-    6: solution6,
-    7: solution7,
-    8: solution8,
-    9: solution9,
-    10: solution10,
-    11: solution11,
+const solutions = {
+  1: solution1,
+  2: solution2,
+  3: solution3,
+  4: solution4,
+  5: solution5,
+  6: solution6,
+  7: solution7,
+  8: solution8,
+  9: solution9,
+  10: solution10,
+  11: solution11,
 };
-
 
 // TEST SOLUTION
 if (logSolutionActive) {
-    console.log("SOLUTION IS RUNNING....");
-    for (let i = 1; i <= totalFunc; i++) {
-        if (solution.hasOwnProperty(i)) {
-            console.log(
-                solution[i](testWord),
-                `RESULT SOLUTION ${i}`
-            ); // a!y&@.olah
-        }
+  for (let word of testWords) {
+    console.log(`\nSOLUTION IS RUNNING FOR "${word}"`);
+    for (let x in solutions) {
+      console.log(`RESULT SOLUTION ${x} =>`, solutions[x](word));
     }
+  }
 }
 
 // BENCHMARK
 if (benchmarkActive) {
-    console.log("\nBENCHMARK IS RUNNING....");
-    for (let i = 1; i <= totalFunc; i++) {
-        if (solution.hasOwnProperty(i)) {
-            console.log(
-                benchmark(solution[i],
-                    testWord,
-                    loopTimes
-                ),
-                `=> SOLUTION ${i}`
-            );
-        }
+  for (let word of testWords) {
+    console.log(`\nBENCHMARK IS RUNNING FOR "${word}"`);
+    for (let x in solutions) {
+      console.log(`SOLUTION ${x} =>`, benchmark(solutions[x], word, loopTimes));
     }
+  }
 }
