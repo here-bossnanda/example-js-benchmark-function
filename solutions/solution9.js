@@ -24,4 +24,4 @@ const solution9 = (sentence) => {
 
 module.exports = { solution9 }
 
-// created by: johnatan
+// created by: jonathan
